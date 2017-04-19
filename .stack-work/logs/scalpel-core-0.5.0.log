@@ -1,0 +1,15 @@
+Configuring scalpel-core-0.5.0...
+Building scalpel-core-0.5.0...
+Preprocessing library scalpel-core-0.5.0...
+[1 of 6] Compiling Text.HTML.Scalpel.Internal.Select.Types ( src/Text/HTML/Scalpel/Internal/Select/Types.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Internal/Select/Types.o )
+[2 of 6] Compiling Text.HTML.Scalpel.Internal.Select.Combinators ( src/Text/HTML/Scalpel/Internal/Select/Combinators.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Internal/Select/Combinators.o )
+[3 of 6] Compiling Text.HTML.Scalpel.Internal.Select ( src/Text/HTML/Scalpel/Internal/Select.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Internal/Select.o )
+
+src/Text/HTML/Scalpel/Internal/Select.hs:79:35: warning: [-Wunused-matches]
+    Defined but not used: ‘ctx’
+[4 of 6] Compiling Text.HTML.Scalpel.Internal.Scrape ( src/Text/HTML/Scalpel/Internal/Scrape.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Internal/Scrape.o )
+[5 of 6] Compiling Text.HTML.Scalpel.Internal.Scrape.StringLike ( src/Text/HTML/Scalpel/Internal/Scrape/StringLike.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Internal/Scrape/StringLike.o )
+[6 of 6] Compiling Text.HTML.Scalpel.Core ( src/Text/HTML/Scalpel/Core.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Text/HTML/Scalpel/Core.o )
+Installing library in
+/Users/mludwigs/.stack/snapshots/x86_64-osx/lts-8.11/8.0.2/lib/x86_64-osx-ghc-8.0.2/scalpel-core-0.5.0-CkYdV44Dp6q1T8xjtgydtx
+Registering scalpel-core-0.5.0...
