@@ -13,7 +13,7 @@ type Url = String
 urls :: [Url]
 urls =
   [ "http://www.livingspaces.com/ProductView.aspx?productId=71481"
-  , "http://www.livingspaces.com/ProductView.aspx?productId=71481"
+  , "http://www.livingspaces.com/Views/Mobile/productview.aspx?productId=93806"
   ]
 
 getHtml :: String -> IO ByteString
