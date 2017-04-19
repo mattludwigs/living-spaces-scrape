@@ -2,7 +2,6 @@
 
 module Main where
 
-import Control.Monad (mapM_)
 import Network.Wreq (get, responseBody)
 import Control.Lens ((^.))
 import Data.ByteString.Lazy.Internal (ByteString)
@@ -11,6 +10,11 @@ import Text.HTML.TagSoup ((~==), Tag(..), parseTags)
 
 type Url = String
 
+urls :: [Url]
+urls =
+  ["http://www.livingspaces.com/ProductView.aspx?productId=71481"
+  , "http://www.livingspaces.com/ProductView.aspx?productId=71481"
+  ]
 
 getHtml :: String -> IO ByteString
 getHtml url = do
@@ -28,21 +32,11 @@ processUrl url = do
   htmlForDresser <- getHtml url
   return $ getTagForClearance htmlForDresser
 
+printMessage :: Maybe (Tag ByteString) -> IO ()
+printMessage (Just _) = putStrLn "On Clearance"
+printMessage Nothing = putStrLn "Not on Clearance"
 
 main :: IO ()
 main = do
-  htmlForDresser <- getHtml "http://www.livingspaces.com/ProductView.aspx?productId=71481"
-
-  case getTagForClearance htmlForDresser of
-    Just _ ->
-      putStrLn "Dresser: On clearance"
-    Nothing ->
-      putStrLn "Dresser: Not on clearance"
-
-  htmlForChair <- getHtml "http://www.livingspaces.com/ProductView.aspx?productId=71481"
-
-  case getTagForClearance htmlForChair of
-    Just _ ->
-      putStrLn "Chair: On clearance"
-    Nothing ->
-      putStrLn "Chair: Not on clearance"
+  processUrl (head urls) >>= printMessage
+  processUrl (last urls) >>= printMessage

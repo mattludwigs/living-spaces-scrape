@@ -23,6 +23,7 @@ executable living-spaces
                      , lens
                      , bytestring
                      , tagsoup
+                     , transformers
   default-language:    Haskell2010
 
 test-suite living-spaces-test
